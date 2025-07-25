@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Force fixed width and disable zoom/resizing -->
   <meta name="viewport" content="width=1024, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>LORE SERVER</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Pixel Minecraft-style Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+
   <style>
     * {
       box-sizing: border-box;
@@ -14,9 +16,9 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('https://i.postimg.cc/q7QGmB1x/Screenshot-2025-07-21-180533.png') no-repeat center center;
+      background: url('https://i.postimg.cc/3Jbpwz3Y/Screenshot-2025-07-25-191533.png') no-repeat center center;
       background-size: cover;
-      min-width: 1024px; /* lock desktop width */
+      min-width: 1024px;
       overflow-x: auto;
     }
 
@@ -47,27 +49,40 @@
       justify-content: center;
     }
 
-    .logo {
-      background: url('https://i.postimg.cc/nLxdRPpp/Screenshot-2025-07-21-180357.png') no-repeat center center;
-      background-size: contain;
-      width: 400px;
-      height: 150px;
+    .minecraft-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .minecraft-title .lore,
+    .minecraft-title .server {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 64px;
+      color: transparent;
+      background: url('https://i.postimg.cc/DyqrxxhT/Screenshot-2025-07-11-195455.png') repeat;
+      background-size: contain;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     @keyframes glow {
       from {
-        filter: drop-shadow(0 0 10px #fffa);
+        filter: drop-shadow(0 0 6px #ffffffaa);
       }
       to {
-        filter: drop-shadow(0 0 25px #ff0);
+        filter: drop-shadow(0 0 16px #ffff00cc);
       }
     }
 
     .section-title {
       text-align: center;
-      background-color: #b30000;
-      color: white;
+      background-color: #191970;
+      color: #6A5ACD;
       padding: 12px;
       margin-top: 30px;
       font-weight: bold;
@@ -77,16 +92,25 @@
 
     .coming-soon {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 40px;
+      gap: 20px;
     }
 
-    .coming-soon img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 15px;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    .coming-soon .coming,
+    .coming-soon .soon {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 48px;
+      color: transparent;
+      background: url('https://i.postimg.cc/Y2Pn5nTL/Screenshot-2025-07-18-194001.png') repeat;
+      background-size: contain;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-transform: uppercase;
+      text-align: center;
+      animation: glow 2s ease-in-out infinite alternate;
     }
 
     .container {
@@ -94,13 +118,13 @@
       justify-content: center;
       gap: 30px;
       padding: 20px;
-      flex-wrap: nowrap; /* prevent wrapping */
+      flex-wrap: nowrap;
     }
 
     .item {
       text-align: center;
       width: 200px;
-      background-color: white;
+      background-color: #9932CC;
       padding: 10px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -117,6 +141,12 @@
       margin-top: 10px;
     }
 
+    .highlighted-item {
+      background: url('https://i.postimg.cc/N01M8Xtd/Screenshot-2025-07-25-183058.png') no-repeat center center;
+      background-size: cover;
+      color: white;
+    }
+
     footer {
       margin-top: 40px;
       background-color: #111;
@@ -125,13 +155,10 @@
       padding: 20px 10px;
       font-size: 14px;
     }
-
-    /* REMOVE ALL media queries */
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
     <a href="game.html">Game</a>
     <a href="#">Merch</a>
@@ -139,20 +166,25 @@
     <a href="blog.html">Blog</a>
   </nav>
 
-  <!-- Header -->
   <header>
-    <div class="logo"></div>
+    <div class="minecraft-title">
+      <div class="lore">LORE</div>
+      <div class="server">SERVER</div>
+    </div>
   </header>
 
-  <!-- Featured Merch -->
   <div class="section-title">FEATURED MERCH</div>
   <div class="coming-soon">
-    <img src="https://i.postimg.cc/zX6Dgn5n/Screenshot-2025-07-21-181302.png" alt="Coming Soon">
+    <div class="coming">COMING</div>
+    <div class="soon">SOON</div>
   </div>
 
-  <!-- Latest Posts -->
   <div class="section-title">LATEST POSTS</div>
   <div class="container">
+    <div class="item highlighted-item">
+      <img src="https://i.postimg.cc/g0QrS6MM/Screenshot-2025-07-23-191748.png" alt="Bulletin 005">
+      <p>The Lore Bulletin #005</p>
+    </div>
     <div class="item">
       <img src="https://i.postimg.cc/jjyyD2n1/Screenshot-2025-07-18-200848.png" alt="Bulletin 004">
       <p>The Lore Bulletin #004</p>
@@ -161,13 +193,8 @@
       <img src="https://i.postimg.cc/QtMsbqGF/Screenshot-2025-07-11-185802.png" alt="Bulletin 003">
       <p>The Lore Bulletin #003</p>
     </div>
-    <div class="item">
-      <img src="https://i.postimg.cc/gk45mVT3/Gemini-Generated-Image-iivlkviivlkviivl.png" alt="Bulletin 002">
-      <p>The Lore Bulletin #002</p>
-    </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     &copy; LORE SERVER WEBSITE. Creation by THE LORE. All rights reserved.
   </footer>
