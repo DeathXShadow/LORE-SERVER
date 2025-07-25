@@ -9,20 +9,31 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
+      background: url('https://i.postimg.cc/cH7S6qYH/Screenshot-2025-07-25-194902.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .section-title-wrapper {
+      text-align: center;
+      background: url('https://i.postimg.cc/zvKv729H/Screenshot-2025-07-25-200247.png') no-repeat center center;
+      background-size: cover;
+      padding: 20px 0;
+      border-radius: 8px;
+      margin: 30px auto 20px;
+      max-width: 100%;
     }
 
     .section-title {
-      font-size: 36px;
-      text-align: center;
-      font-weight: bold;
-      color: white;
-      padding: 12px 0;
-      margin: 40px 0 20px;
-      border-radius: 8px;
-      background: linear-gradient(90deg, #2196f3, #9c27b0);
+      font-size: 60px;
+      margin: 0;
+      background-image: url('https://i.postimg.cc/3Jbpwz3Y/Screenshot-2025-07-25-191533.png'); /* Image inside text */
+      background-size: cover;
+      background-position: center;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
       font-family: 'Georgia', serif;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .news-container {
@@ -84,7 +95,7 @@
     }
 
     .news-card {
-      background: white;
+      background: linear-gradient(135deg, #6A5ACD, #483D8B);;
       border-radius: 10px;
       padding: 15px;
       flex: 1 1 calc(33.333% - 20px);
@@ -134,7 +145,9 @@
 </head>
 <body>
 
-  <div class="section-title">NEWS</div>
+  <div class="section-title-wrapper">
+    <h1 class="section-title">NEWS</h1>
+  </div>
 
   <div class="news-container">
     <!-- Main Featured News -->
