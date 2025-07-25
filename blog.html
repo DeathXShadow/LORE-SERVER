@@ -20,7 +20,7 @@
       padding: 12px 0;
       margin: 40px 0 20px;
       border-radius: 8px;
-      background: linear-gradient(90deg, #2196f3, #9c27b0); /* Blue to purple */
+      background: linear-gradient(90deg, #2196f3, #9c27b0);
       font-family: 'Georgia', serif;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
@@ -34,15 +34,18 @@
     .main-news {
       display: flex;
       gap: 20px;
-      background: white;
+      background: url('https://i.postimg.cc/N01M8Xtd/Screenshot-2025-07-25-183058.png') no-repeat center center;
+      background-size: cover;
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 30px;
+      flex-wrap: wrap;
     }
 
     .main-news img {
       width: 60%;
       border-radius: 10px;
+      min-width: 280px;
     }
 
     .main-news-content {
@@ -52,14 +55,17 @@
       justify-content: flex-start;
       align-items: flex-end;
       text-align: right;
+      color: #FFD700;
+      min-width: 250px;
     }
 
     .main-news-content h3 {
       margin: 0 0 5px 0;
+      color: #FFC300;
     }
 
     .read-more {
-      background: #333;
+      background: black;
       color: white;
       padding: 8px 14px;
       text-decoration: none;
@@ -73,6 +79,8 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
     }
 
     .news-card {
@@ -81,6 +89,8 @@
       padding: 15px;
       flex: 1 1 calc(33.333% - 20px);
       box-sizing: border-box;
+      min-width: 280px;
+      max-width: 300px;
     }
 
     .news-card img {
@@ -96,6 +106,8 @@
     @media (max-width: 768px) {
       .main-news {
         flex-direction: column;
+        align-items: center;
+        text-align: right;
       }
 
       .main-news img {
@@ -103,16 +115,19 @@
       }
 
       .main-news-content {
-        align-items: flex-start;
-        text-align: left;
+        align-items: flex-end;
+        text-align: right;
+        width: 100%;
       }
 
       .news-grid {
         flex-direction: column;
+        align-items: center;
       }
 
       .news-card {
-        flex: 1 1 100%;
+        width: 100%;
+        max-width: 400px;
       }
     }
   </style>
@@ -124,16 +139,22 @@
   <div class="news-container">
     <!-- Main Featured News -->
     <div class="main-news">
-      <img src="https://i.postimg.cc/jjyyD2n1/Screenshot-2025-07-18-200848.png" alt="Main News">
+      <img src="https://i.postimg.cc/g0QrS6MM/Screenshot-2025-07-23-191748.png" alt="Main News">
       <div class="main-news-content">
-        <h3>The Lore Bulletin #004</h3>
-        <p>July 18, 2025<br>The Lore Bulletin - Issue 004</p>
-        <a href="https://deathxshadow.github.io/Lore-Server-Issue-004/" class="read-more" target="_blank">READ MORE</a>
+        <h3>The Lore Bulletin #005</h3>
+        <p>July 18, 2025<br>The Lore Bulletin - Issue 005</p>
+        <a href="https://deathxshadow.github.io/Lore-server-Issue-005/" class="read-more" target="_blank">READ MORE</a>
       </div>
     </div>
 
-    <!-- Grid News -->
+    <!-- First row of grid news -->
     <div class="news-grid">
+      <div class="news-card">
+        <img src="https://i.postimg.cc/QtMsbqGF/Screenshot-2025-07-11-185802.png" alt="Bulletin 004">
+        <h4>The Lore Bulletin #004</h4>
+        <p>The Lore Bulletin – Issue 004</p>
+        <a href="https://deathxshadow.github.io/Lore-Server-Issue-003/" class="read-more" target="_blank">READ MORE</a>
+      </div>
       <div class="news-card">
         <img src="https://i.postimg.cc/QtMsbqGF/Screenshot-2025-07-11-185802.png" alt="Bulletin 003">
         <h4>The Lore Bulletin #003</h4>
@@ -146,6 +167,10 @@
         <p>The Lore Bulletin – Issue 002</p>
         <a href="https://deathxshadow.github.io/Lore-Server-Issue-002/" class="read-more" target="_blank">READ MORE</a>
       </div>
+    </div>
+
+    <!-- Second row with only Bulletin 001 -->
+    <div class="news-grid">
       <div class="news-card">
         <img src="https://i.postimg.cc/QMtQj182/image0.jpg" alt="Bulletin 001">
         <h4>The Blox Bulletin #001</h4>
