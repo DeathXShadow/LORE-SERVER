@@ -45,7 +45,7 @@
     .main-news {
       display: flex;
       gap: 20px;
-      background: url('https://i.postimg.cc/N01M8Xtd/Screenshot-2025-07-25-183058.png') no-repeat center center;
+      background: url('https://i.postimg.cc/T2kPcf8v/Screenshot-2025-07-25-183121.png') no-repeat center center;
       background-size: cover;
       padding: 20px;
       border-radius: 10px;
@@ -66,13 +66,13 @@
       justify-content: flex-start;
       align-items: flex-end;
       text-align: right;
-      color: #FFD700;
+      color: #E6E6FA;
       min-width: 250px;
     }
 
     .main-news-content h3 {
       margin: 0 0 5px 0;
-      color: #FFC300;
+      color: #87CEEB;
     }
 
     .read-more {
@@ -95,13 +95,14 @@
     }
 
     .news-card {
-      background: linear-gradient(135deg, #6A5ACD, #483D8B);;
+      background: linear-gradient(135deg, #6A5ACD, #483D8B);
       border-radius: 10px;
       padding: 15px;
       flex: 1 1 calc(33.333% - 20px);
       box-sizing: border-box;
       min-width: 280px;
       max-width: 300px;
+      color: white;
     }
 
     .news-card img {
@@ -113,6 +114,14 @@
     .news-card h4 {
       margin: 10px 0 5px;
     }
+
+    .bulletin-005 {
+  background: url('https://i.postimg.cc/zvS2fFjN/Screenshot-2025-07-25-182831.png') no-repeat center center;
+  background-size: cover;
+  color: #FFD700; /* Gold text for special effect */
+  text-shadow: 1px 1px 2px #000; /* Optional: makes text pop */
+}
+
 
     @media (max-width: 768px) {
       .main-news {
@@ -152,21 +161,31 @@
   <div class="news-container">
     <!-- Main Featured News -->
     <div class="main-news">
-      <img src="https://i.postimg.cc/g0QrS6MM/Screenshot-2025-07-23-191748.png" alt="Main News">
+      <img src="https://i.postimg.cc/B6WWMPmV/Screenshot-2025-07-25-175709.png" alt="Main News">
       <div class="main-news-content">
-        <h3>The Lore Bulletin #005</h3>
-        <p>July 18, 2025<br>The Lore Bulletin - Issue 005</p>
-        <a href="https://deathxshadow.github.io/Lore-server-Issue-005/" class="read-more" target="_blank">READ MORE</a>
+        <h3>The Lore Bulletin #006</h3>
+        <p>July 18, 2025<br>The Lore Bulletin - Issue 006</p>
+	<p><b>THE FINAL BULLETINS BEFORE RELEASE</b></p>
+	<p>With Bulletin 006 now in your hands, the final steps toward the Lore Server’s grand opening are being written. The next bulletin will be the last before the gates finally open — and it will carry with it the final echoes of everything we've built so far.</p>
+	<p>What began as a purely vanilla vision gradually transformed into something far more adventurous. The Lore Server, originally planned to launch without a single modification, took a bold detour — one led by creativity and community spirit.</p>
+	<p>The once bleak and empty void of The End has been utterly transformed.</p>
+        <a href="https://deathxshadow.github.io/Lore-Server-Issue-006/" class="read-more" target="_blank">READ MORE</a>
       </div>
     </div>
 
     <!-- First row of grid news -->
     <div class="news-grid">
+      <div class="news-card bulletin-005">
+        <img src="https://i.postimg.cc/g0QrS6MM/Screenshot-2025-07-23-191748.png" alt="Bulletin 005">
+        <h4>The Lore Bulletin #005</h4>
+        <p>The Lore Bulletin – Issue 005</p>
+        <a href="https://deathxshadow.github.io/Lore-server-Issue-005/" class="read-more" target="_blank">READ MORE</a>
+      </div>
       <div class="news-card">
-        <img src="https://i.postimg.cc/QtMsbqGF/Screenshot-2025-07-11-185802.png" alt="Bulletin 004">
+        <img src="https://i.postimg.cc/jjyyD2n1/Screenshot-2025-07-18-200848.png" alt="Bulletin 004">
         <h4>The Lore Bulletin #004</h4>
         <p>The Lore Bulletin – Issue 004</p>
-        <a href="https://deathxshadow.github.io/Lore-Server-Issue-003/" class="read-more" target="_blank">READ MORE</a>
+        <a href="https://deathxshadow.github.io/Lore-Server-Issue-004/" class="read-more" target="_blank">READ MORE</a>
       </div>
       <div class="news-card">
         <img src="https://i.postimg.cc/QtMsbqGF/Screenshot-2025-07-11-185802.png" alt="Bulletin 003">
@@ -174,21 +193,21 @@
         <p>The Lore Bulletin – Issue 003</p>
         <a href="https://deathxshadow.github.io/Lore-Server-Issue-003/" class="read-more" target="_blank">READ MORE</a>
       </div>
-      <div class="news-card">
-        <img src="https://i.postimg.cc/gk45mVT3/Gemini-Generated-Image-iivlkviivlkviivl.png" alt="Bulletin 002">
-        <h4>The Lore Bulletin #002</h4>
-        <p>The Lore Bulletin – Issue 002</p>
-        <a href="https://deathxshadow.github.io/Lore-Server-Issue-002/" class="read-more" target="_blank">READ MORE</a>
-      </div>
     </div>
 
-    <!-- Second row with only Bulletin 001 -->
+    <!-- Second row with Bulletin 002 and 001 -->
     <div class="news-grid">
+      <div class="news-card">
+        <img src="https://i.postimg.cc/gk45mVT3/Gemini-Generated-Image-iivlkviivlkviivl.png" alt="Bulletin 002">
+        <h4>The Blox Bulletin #002</h4>
+        <p>The Blox Bulletin – Issue 002</p>
+        <a href="https://deathxshadow.github.io/Lore-Server-Issue-002/" class="read-more" target="_blank">READ MORE</a>
+      </div>
       <div class="news-card">
         <img src="https://i.postimg.cc/QMtQj182/image0.jpg" alt="Bulletin 001">
         <h4>The Blox Bulletin #001</h4>
         <p>The Blox Bulletin – Issue 001</p>
-        <a href="https://deathxshadow.github.io/" class="read-more" target="_blank">READ MORE</a>
+        <a href="https://deathxshadow.github.io/DeathXShadow.github.io/" class="read-more" target="_blank">READ MORE</a>
       </div>
     </div>
   </div>
