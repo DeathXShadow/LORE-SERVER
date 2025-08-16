@@ -9,13 +9,13 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: url('https://i.postimg.cc/cH7S6qYH/Screenshot-2025-07-25-194902.png') no-repeat center center fixed;
+      background: url('https://i.postimg.cc/D0bJ9K0R/Screenshot-2025-08-16-212805.png') no-repeat center center fixed;
       background-size: cover;
     }
 
     .section-title-wrapper {
       text-align: center;
-      background: url('https://i.postimg.cc/zvKv729H/Screenshot-2025-07-25-200247.png') no-repeat center center;
+      background: url('https://i.postimg.cc/sfkCsR1K/Screenshot-2025-08-16-213241.png') no-repeat center center;
       background-size: cover;
       padding: 20px 0;
       border-radius: 8px;
@@ -26,7 +26,7 @@
     .section-title {
       font-size: 60px;
       margin: 0;
-      background-image: url('https://i.postimg.cc/3Jbpwz3Y/Screenshot-2025-07-25-191533.png'); /* Image inside text */
+      background: linear-gradient(180deg, #2B0000, #4A0000, #8B0000, #000000);
       background-size: cover;
       background-position: center;
       -webkit-background-clip: text;
@@ -45,7 +45,7 @@
     .main-news {
       display: flex;
       gap: 20px;
-      background: url('https://i.postimg.cc/T2kPcf8v/Screenshot-2025-07-25-183121.png') no-repeat center center;
+      background: url('https://i.postimg.cc/rp68FNbw/Screenshot-2025-08-02-181926.png') no-repeat center center;
       background-size: cover;
       padding: 20px;
       border-radius: 10px;
@@ -66,15 +66,31 @@
       justify-content: flex-start;
       align-items: flex-end;
       text-align: right;
-      color: #E6E6FA;
+        font-size: 14px;   /* smaller than h3 */
+  font-weight: normal;
+  color: #ffffff;
+  text-shadow:
+    0 0 3px #ff0000,
+    0 0 6px #ff0000;
       min-width: 250px;
     }
 
     .main-news-content h3 {
       margin: 0 0 5px 0;
-      color: #87CEEB;
+      color: Red;
     }
-
+    
+      h3.glow-red {
+    font-size: 28px; /* adjust size */
+    font-weight: bold;
+    color: #ffffff; /* white inside */
+    text-shadow: 
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 20px #ff0000,
+      0 0 40px #ff0000;
+  }
+     
     .read-more {
       background: black;
       color: white;
@@ -95,7 +111,7 @@
     }
 
     .news-card {
-      background: linear-gradient(135deg, #6A5ACD, #483D8B);
+      background: linear-gradient(180deg, #2B0000, #4A0000, #8B0000, #000000);
       border-radius: 10px;
       padding: 15px;
       flex: 1 1 calc(33.333% - 20px);
@@ -121,7 +137,13 @@
   color: #FFD700; /* Gold text for special effect */
   text-shadow: 1px 1px 2px #000; /* Optional: makes text pop */
 }
-
+ 
+.bulletin-006 {
+  background: url('https://i.postimg.cc/T2kPcf8v/Screenshot-2025-07-25-183121.png') no-repeat center center;
+  background-size: cover;
+  color: #87CEEB; /* Gold text for special effect */
+  text-shadow: 1px 1px 2px #000; /* Optional: makes text pop */
+}
 
     @media (max-width: 768px) {
       .main-news {
@@ -161,20 +183,27 @@
   <div class="news-container">
     <!-- Main Featured News -->
     <div class="main-news">
-      <img src="https://i.postimg.cc/B6WWMPmV/Screenshot-2025-07-25-175709.png" alt="Main News">
+      <img src="https://i.postimg.cc/jdspd7Cr/Screenshot-2025-08-02-174144.png" alt="Main News">
       <div class="main-news-content">
-        <h3>The Lore Bulletin #006</h3>
-        <p>July 18, 2025<br>The Lore Bulletin - Issue 006</p>
-	<p><b>THE FINAL BULLETINS BEFORE RELEASE</b></p>
-	<p>With Bulletin 006 now in your hands, the final steps toward the Lore Server’s grand opening are being written. The next bulletin will be the last before the gates finally open — and it will carry with it the final echoes of everything we've built so far.</p>
-	<p>What began as a purely vanilla vision gradually transformed into something far more adventurous. The Lore Server, originally planned to launch without a single modification, took a bold detour — one led by creativity and community spirit.</p>
-	<p>The once bleak and empty void of The End has been utterly transformed.</p>
-        <a href="https://deathxshadow.github.io/Lore-Server-Issue-006/" class="read-more" target="_blank">READ MORE</a>
+        <h3 class="glow-red">The Lore Bulletin #007</h3>
+        <p>August 15, 2025<br>The Lore Bulletin - Issue 007</p>
+	<p><b>THE FINAL BULLETIN BEFORE RELEASE</b></p>
+	<p>As we edge into the new era of the Lore Server, one of the most player-requested features is finally making its debut:</p>
+	<p>What once stood as familiar ruins now rise as towering legends. In the upcoming release, structures across the realm have been completely overhauled—and with them, the dangers they hold.</p>
+	<p><b>The long-awaited trailer has finally dropped.</b></p>
+        <p>Grab your gear, mark your calendars, and prepare to enter the next chapter.</p>
+        <a href="https://deathxshadow.github.io/Lore-Server-Issue-007/" class="read-more" target="_blank">READ MORE</a>
       </div>
     </div>
 
     <!-- First row of grid news -->
     <div class="news-grid">
+      <div class="news-card bulletin-006">
+        <img src="https://i.postimg.cc/B6WWMPmV/Screenshot-2025-07-25-175709.png" alt="Bulletin 006">
+        <h4>The Lore Bulletin #006</h4>
+        <p>The Lore Bulletin – Issue 006</p>
+        <a href="https://deathxshadow.github.io/Lore-Server-Issue-006/" class="read-more" target="_blank">READ MORE</a>
+      </div>
       <div class="news-card bulletin-005">
         <img src="https://i.postimg.cc/g0QrS6MM/Screenshot-2025-07-23-191748.png" alt="Bulletin 005">
         <h4>The Lore Bulletin #005</h4>
@@ -187,16 +216,16 @@
         <p>The Lore Bulletin – Issue 004</p>
         <a href="https://deathxshadow.github.io/Lore-Server-Issue-004/" class="read-more" target="_blank">READ MORE</a>
       </div>
-      <div class="news-card">
-        <img src="https://i.postimg.cc/QtMsbqGF/Screenshot-2025-07-11-185802.png" alt="Bulletin 003">
-        <h4>The Lore Bulletin #003</h4>
-        <p>The Lore Bulletin – Issue 003</p>
-        <a href="https://deathxshadow.github.io/Lore-Server-Issue-003/" class="read-more" target="_blank">READ MORE</a>
-      </div>
     </div>
 
     <!-- Second row with Bulletin 002 and 001 -->
     <div class="news-grid">
+      <div class="news-card">
+        <img src="https://i.postimg.cc/QtMsbqGF/Screenshot-2025-07-11-185802.png" alt="Bulletin 003">
+        <h4>The Blox Bulletin #003</h4>
+        <p>The Blox Bulletin – Issue 003</p>
+        <a href="https://deathxshadow.github.io/Lore-Server-Issue-003/" class="read-more" target="_blank">READ MORE</a>
+      </div>
       <div class="news-card">
         <img src="https://i.postimg.cc/gk45mVT3/Gemini-Generated-Image-iivlkviivlkviivl.png" alt="Bulletin 002">
         <h4>The Blox Bulletin #002</h4>
@@ -209,6 +238,7 @@
         <p>The Blox Bulletin – Issue 001</p>
         <a href="https://deathxshadow.github.io/DeathXShadow.github.io/" class="read-more" target="_blank">READ MORE</a>
       </div>
+
     </div>
   </div>
 
