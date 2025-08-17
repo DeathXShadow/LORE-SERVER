@@ -16,31 +16,55 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: url('https://i.postimg.cc/3Jbpwz3Y/Screenshot-2025-07-25-191533.png') no-repeat center center;
+      background: url('https://i.postimg.cc/yN3NYC0P/Screenshot-2025-08-16-214528.png') no-repeat center center;
       background-size: cover;
       min-width: 1024px;
       overflow-x: auto;
     }
 
     nav {
-      background-color: rgba(0, 0, 0, 0.7);
+  background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url("https://i.postimg.cc/d0jGtvqC/Screenshot-2025-08-16-213959.png") no-repeat center center;
+  background-size: cover;;
       display: flex;
       justify-content: center;
       gap: 40px;
       padding: 15px 0;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: 0.3s;
-    }
+nav a {
+  display: inline-block;             /* enables padding/transform */
+  padding: 6px 12px;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  transition: color .2s, text-shadow .2s, transform .2s, background .2s;
+  color: transparent;
+      background: url('https://i.postimg.cc/CdyvfdVk/Screenshot-2025-08-02-182157.png') repeat;
+      background-size: contain;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-transform: uppercase;
+      text-align: center;
 
-    nav a:hover {
-      color: #00ffff;
-    }
+}
+
+
+nav a:hover,
+nav a:focus-visible,
+nav a:active {
+  color: white; /* dark blood red */
+  text-shadow: 
+    0 0 3px #ff0000, 
+    0 0 6px #8b0000, 
+    0 2px 4px #300; /* dripping/dark effect */
+  transform: translateY(2px) scale(1.05); /* push down like dripping */
+  background: rgba(139, 0, 0, 0.3); /* bloody background */
+  border-radius: 6px;
+}
 
     header {
       height: 250px;
@@ -62,7 +86,7 @@
       font-family: 'Press Start 2P', monospace;
       font-size: 64px;
       color: transparent;
-      background: url('https://i.postimg.cc/DyqrxxhT/Screenshot-2025-07-11-195455.png') repeat;
+      background: url('https://i.postimg.cc/76tL9P1S/Screenshot-2025-08-16-220101.png') repeat;
       background-size: contain;
       -webkit-background-clip: text;
       background-clip: text;
@@ -79,16 +103,31 @@
       }
     }
 
-    .section-title {
-      text-align: center;
-      background-color: #191970;
-      color: #6A5ACD;
-      padding: 12px;
-      margin-top: 30px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 22px;
-    }
+.section-title {
+  text-align: center;
+  color: #fff; /* white text for contrast */
+  padding: 12px;
+  margin-top: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 22px;
+
+  /* blood-style animated background */
+  background: radial-gradient(circle at 20% 30%, rgba(255, 0, 50, 0.6), transparent 60%),
+              radial-gradient(circle at 80% 40%, rgba(180, 0, 20, 0.4), transparent 60%),
+              radial-gradient(circle at 50% 70%, rgba(255, 30, 80, 0.5), transparent 60%);
+  background-color: #0a0002;
+  animation: bloodShift 10s infinite alternate ease-in-out;
+  filter: saturate(150%);
+  border-radius: 6px;
+}
+
+@keyframes bloodShift {
+  0%   { background-position: 0% 0%, 100% 50%, 50% 100%; }
+  50%  { background-position: 30% 20%, 70% 80%, 40% 60%; }
+  100% { background-position: 0% 0%, 100% 50%, 50% 100%; }
+}
+
 
     .coming-soon {
       display: flex;
@@ -104,13 +143,22 @@
       font-family: 'Press Start 2P', monospace;
       font-size: 48px;
       color: transparent;
-      background: url('https://i.postimg.cc/Y2Pn5nTL/Screenshot-2025-07-18-194001.png') repeat;
+      background: url('https://i.postimg.cc/CdyvfdVk/Screenshot-2025-08-02-182157.png') repeat;
       background-size: contain;
       -webkit-background-clip: text;
       background-clip: text;
       text-transform: uppercase;
       text-align: center;
       animation: glow 2s ease-in-out infinite alternate;
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #8b0000;
+  }
+  to {
+    text-shadow: 0 0 10px #ff1a1a, 0 0 20px #ff3333, 0 0 40px #b30000;
+  }
+}
     }
 
     .container {
@@ -122,16 +170,27 @@
     }
 
     .item {
-      text-align: center;
-      width: 200px;
-      background-color: #9932CC;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      flex-shrink: 0;
-      color: white;
+  text-align: center;
+  width: 200px;
+  background: url('https://i.postimg.cc/N01M8Xtd/Screenshot-2025-07-25-183058.png') no-repeat center center;
+  background-size: cover;
+  color: #FFD700;
+  text-shadow: 1px 1px 3px black;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+  color: white;
+  text-decoration: none; /* remove underline for links */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block; /* so <a> behaves like card */
     }
 
+.item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,0,0,0.7);
+  z-index: 2;
+}
     .item img {
       width: 100%;
       border-radius: 10px;
@@ -140,20 +199,38 @@
     .item p {
       font-size: 14px;
       margin-top: 10px;
+      color: #FFD700;
     }
 
     .highlighted-item {
+      background: url('https://i.postimg.cc/9fP7Y0HC/Screenshot-2025-08-02-180759.png') no-repeat center center;
+      background-size: cover;
+      color: red;
+      text-shadow: 1px 1px 3px black;
+    }
+   
+    .highlighted-item p {
+      font-size: 14px;
+      margin-top: 10px;
+        color: white; /* dark blood red */
+  text-shadow: 
+    0 0 3px #ff0000, 
+    0 0 6px #8b0000, 
+    0 2px 4px #300; /* dripping/dark effect */
+  transform: translateY(2px) scale(1.05); /* push down like dripping */
+ }
+
+    .highlighted-item-004 {
       background: url('https://i.postimg.cc/T2kPcf8v/Screenshot-2025-07-25-183121.png') no-repeat center center;
       background-size: cover;
       color: #E6E6FA;
       text-shadow: 1px 1px 3px black;
     }
 
-    .highlighted-item-004 {
-      background: url('https://i.postimg.cc/N01M8Xtd/Screenshot-2025-07-25-183058.png') no-repeat center center;
-      background-size: cover;
-      color: #FFD700;
-      text-shadow: 1px 1px 3px black;
+    .highlighted-item-004 p {
+      font-size: 14px;
+      margin-top: 10px;
+        color: #E6E6FA;
     }
 
     footer {
@@ -164,16 +241,17 @@
       padding: 20px 10px;
       font-size: 14px;
     }
+
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="game.html">Game</a>
-    <a href="#">Merch</a>
-    <a href="#">DLC</a>
-    <a href="blog.html">Blog</a>
-  </nav>
+<nav>
+ <a href="game.html">Game</a>
+ <a href="#">Merch</a>
+ <a href="#">DLC</a>
+ <a href="blog.html">Blog</a> 
+</nav>
 
   <header>
     <div class="minecraft-title">
@@ -189,19 +267,22 @@
   </div>
 
   <div class="section-title">LATEST POSTS</div>
-  <div class="container">
-    <div class="item highlighted-item">
-      <img src="https://i.postimg.cc/B6WWMPmV/Screenshot-2025-07-25-175709.png" alt="Bulletin 006">
-      <p>The Lore Bulletin #006</p>
-    </div>
-    <div class="item highlighted-item-004">
-      <img src="https://i.postimg.cc/g0QrS6MM/Screenshot-2025-07-23-191748.png" alt="Bulletin 005">
-      <p>The Lore Bulletin #005</p>
-    </div>
-    <div class="item">
-      <img src="https://i.postimg.cc/jjyyD2n1/Screenshot-2025-07-18-200848.png" alt="Bulletin 004">
-      <p>The Lore Bulletin #004</p>
-    </div>
+<div class="container">
+  <a href="https://deathxshadow.github.io/Lore-Server-Issue-007/" target="_blank" class="item highlighted-item">
+    <img src="https://i.postimg.cc/jdspd7Cr/Screenshot-2025-08-02-174144.png" alt="Bulletin 007">
+    <p>The Lore Bulletin #007</p>
+  </a>
+
+  <a href="https://deathxshadow.github.io/Lore-Server-Issue-006/" target="_blank" class="item highlighted-item-004">
+    <img src="https://i.postimg.cc/B6WWMPmV/Screenshot-2025-07-25-175709.png" alt="Bulletin 006">
+    <p>The Lore Bulletin #006</p>
+  </a>
+
+  <a href="https://deathxshadow.github.io/Lore-server-Issue-005/" target="_blank" class="item">
+    <img src="https://i.postimg.cc/g0QrS6MM/Screenshot-2025-07-23-191748.png" alt="Bulletin 005">
+    <p>The Lore Bulletin #005</p>
+  </a>
+</div>
   </div>
 
   <footer>
