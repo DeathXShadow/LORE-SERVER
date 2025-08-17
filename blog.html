@@ -144,7 +144,40 @@
       text-shadow: 1px 1px 2px #000;
     }
 
-    /* 🔴 Removed the @media section so desktop layout stays on mobile */
+   @media (max-width: 768px) {
+  .section-title {
+    font-size: 40px;
+  }
+
+  .main-news {
+    flex-wrap: nowrap; /* prevent stacking */
+    flex-direction: row; /* keep image + text side by side */
+  }
+
+  .main-news img {
+    width: 60%; /* keep big */
+    min-width: 200px;
+  }
+
+  .main-news-content {
+    font-size: 14px;
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .news-grid {
+    display: flex;       /* keep same 3-grid */
+    flex-wrap: nowrap;   /* prevent wrapping into single column */
+    justify-content: space-between;
+  }
+
+  .news-card {
+    flex: 1 1 30%;       /* keep 3 in a row */
+    min-width: auto;     /* no forced stacking */
+    max-width: none;
+  }
+}
+
   </style>
 </head>
 <body>
