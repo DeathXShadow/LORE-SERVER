@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
   <title>LORE SERVER News</title>
   <style>
     body {
@@ -11,6 +11,7 @@
       padding: 0;
       background: url('https://i.postimg.cc/D0bJ9K0R/Screenshot-2025-08-16-212805.png') no-repeat center center fixed;
       background-size: cover;
+      overflow-x: hidden; /* prevents horizontal scrolling */
     }
 
     .section-title-wrapper {
@@ -66,12 +67,10 @@
       justify-content: flex-start;
       align-items: flex-end;
       text-align: right;
-        font-size: 14px;   /* smaller than h3 */
-  font-weight: normal;
-  color: #ffffff;
-  text-shadow:
-    0 0 3px #ff0000,
-    0 0 6px #ff0000;
+      font-size: 14px;
+      font-weight: normal;
+      color: #ffffff;
+      text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000;
       min-width: 250px;
     }
 
@@ -80,16 +79,16 @@
       color: Red;
     }
     
-      h3.glow-red {
-    font-size: 28px; /* adjust size */
-    font-weight: bold;
-    color: #ffffff; /* white inside */
-    text-shadow: 
-      0 0 5px #ff0000,
-      0 0 10px #ff0000,
-      0 0 20px #ff0000,
-      0 0 40px #ff0000;
-  }
+    h3.glow-red {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 
+        0 0 5px #ff0000,
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
+    }
      
     .read-more {
       background: black;
@@ -132,46 +131,20 @@
     }
 
     .bulletin-005 {
-  background: url('https://i.postimg.cc/zvS2fFjN/Screenshot-2025-07-25-182831.png') no-repeat center center;
-  background-size: cover;
-  color: #FFD700; /* Gold text for special effect */
-  text-shadow: 1px 1px 2px #000; /* Optional: makes text pop */
-}
- 
-.bulletin-006 {
-  background: url('https://i.postimg.cc/T2kPcf8v/Screenshot-2025-07-25-183121.png') no-repeat center center;
-  background-size: cover;
-  color: #87CEEB; /* Gold text for special effect */
-  text-shadow: 1px 1px 2px #000; /* Optional: makes text pop */
-}
-
-    @media (max-width: 768px) {
-      .main-news {
-        flex-direction: column;
-        align-items: center;
-        text-align: right;
-      }
-
-      .main-news img {
-        width: 100%;
-      }
-
-      .main-news-content {
-        align-items: flex-end;
-        text-align: right;
-        width: 100%;
-      }
-
-      .news-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .news-card {
-        width: 100%;
-        max-width: 400px;
-      }
+      background: url('https://i.postimg.cc/zvS2fFjN/Screenshot-2025-07-25-182831.png') no-repeat center center;
+      background-size: cover;
+      color: #FFD700;
+      text-shadow: 1px 1px 2px #000;
     }
+ 
+    .bulletin-006 {
+      background: url('https://i.postimg.cc/T2kPcf8v/Screenshot-2025-07-25-183121.png') no-repeat center center;
+      background-size: cover;
+      color: #87CEEB;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    /* 🔴 Removed the @media section so desktop layout stays on mobile */
   </style>
 </head>
 <body>
@@ -187,16 +160,16 @@
       <div class="main-news-content">
         <h3 class="glow-red">The Lore Bulletin #007</h3>
         <p>August 15, 2025<br>The Lore Bulletin - Issue 007</p>
-	<p><b>THE FINAL BULLETIN BEFORE RELEASE</b></p>
-	<p>As we edge into the new era of the Lore Server, one of the most player-requested features is finally making its debut:</p>
-	<p>What once stood as familiar ruins now rise as towering legends. In the upcoming release, structures across the realm have been completely overhauled—and with them, the dangers they hold.</p>
-	<p><b>The long-awaited trailer has finally dropped.</b></p>
+        <p><b>THE FINAL BULLETIN BEFORE RELEASE</b></p>
+        <p>As we edge into the new era of the Lore Server, one of the most player-requested features is finally making its debut:</p>
+        <p>What once stood as familiar ruins now rise as towering legends. In the upcoming release, structures across the realm have been completely overhauled—and with them, the dangers they hold.</p>
+        <p><b>The long-awaited trailer has finally dropped.</b></p>
         <p>Grab your gear, mark your calendars, and prepare to enter the next chapter.</p>
         <a href="https://deathxshadow.github.io/Lore-Server-Issue-007/" class="read-more" target="_blank">READ MORE</a>
       </div>
     </div>
 
-    <!-- First row of grid news -->
+    <!-- Grid news stays same on mobile -->
     <div class="news-grid">
       <div class="news-card bulletin-006">
         <img src="https://i.postimg.cc/B6WWMPmV/Screenshot-2025-07-25-175709.png" alt="Bulletin 006">
@@ -218,7 +191,6 @@
       </div>
     </div>
 
-    <!-- Second row with Bulletin 002 and 001 -->
     <div class="news-grid">
       <div class="news-card">
         <img src="https://i.postimg.cc/QtMsbqGF/Screenshot-2025-07-11-185802.png" alt="Bulletin 003">
@@ -238,7 +210,6 @@
         <p>The Blox Bulletin – Issue 001</p>
         <a href="https://deathxshadow.github.io/DeathXShadow.github.io/" class="read-more" target="_blank">READ MORE</a>
       </div>
-
     </div>
   </div>
 
